@@ -5,27 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagenes/Icono sabor y encanto.ico" type="image/x-icon">
     <title>Inventario Sabor y Encanto</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <!--<link rel="stylesheet" href="./styles/styles.css">-->
+    <link rel="stylesheet" href="styles/styles/admin.css">
 </head>
 <body>
-    <h1>Inventario Sabor y Encanto</h1>
-    <div id="inventory-section" style="height: 200px; overflow-y: scroll;">
-        <h2>Inventario</h2>
-        <ul id="product-list"></ul>
-    </div>
-
-    <div id="add-product-form">
-        <h2>Agregar Producto</h2>
-        <form id="product-form">
-            <input type="text" id="product-code" placeholder="Código del Producto" required>
-            <input type="text" id="product-name" placeholder="Nombre del Producto" required>
-            <input type="text" id="product-category" placeholder="Categoria del Producto" required>
-            <input type="number" id="product-quantity" placeholder="Cantidad" required>
-            <button type="button" onclick="addProduct()">Agregar</button>
-        </form>
-    </div>
-    <div id="message"></div>
-    <script src="./scripts/inventario.js"></script>
-    <!--Aqui comienza los estilos  de como seva a visualizar el crud-->
+    <header>
+        <section>
+            <div id="volver">
+                <button type="button" id="regreso"><a href="empleadoLogin.html">Atras</a></button>
+            </div>
+            <div id="banne-p">
+                <img src="imagenes/banner1_Mesa de trabajo 1.png" alt="banner primcipal" width="1330px"  height="1250px">
+            </div>
+        </section>
+    </header>
+    <main>
+        <h1 id="titulo-p">Inventario Sabor y Encanto</h1>
+        <div id="inventory-section" style="height: 200px; overflow-y: scroll;">
+            <h2>Inventario</h2>
+            <ul id="product-list"></ul>
+        </div>
+        <div id="add-product-form">
+            <h2>Agregar Producto</h2>
+            <form id="product-form">
+                <input type="text" id="product-code" placeholder="Código del Producto" required>
+                <input type="text" id="product-name" placeholder="Nombre del Producto" required>
+                <input type="text" id="product-category" placeholder="Categoria del Producto" required>
+                <input type="number" id="product-quantity" placeholder="Cantidad" required>
+                <button type="button" onclick="addProduct()" id="btn-agregar">Agregar</button>
+            </form>
+        </div>
+        <div id="message"></div>
+        <script src="./scripts/inventario.js"></script>
+    </main>
 </body>
 </html>

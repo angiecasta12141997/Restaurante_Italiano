@@ -304,7 +304,7 @@ function addProduct() {
     const productQuantity = parseInt(document.getElementById('product-quantity').value, 10);
 
     if (productName && productCategory && !isNaN(productQuantity) && productQuantity > 0 && codeProduct.length == 5) {
-        inventory.push({code: codeProduct, name: productName, category: productcategory, quantity: productQuantity });
+        inventory.push({code: codeProduct, name: productName, category: productCategory, quantity: productQuantity });
         showInventory();
         hideAddProductForm();
         showMessage('Producto agregado al inventario.');
