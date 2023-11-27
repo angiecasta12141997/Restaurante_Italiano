@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="home.html">
     <link rel="stylesheet" href="contacto.html">
     <link rel="stylesheet" href="menu.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="Cross-Origin-Policy" content="same-origin-allow-popups">
+    <script src="https://accounts.google.com/gsi/client"async defer></script>
 </head>
 <body>
     <header>
@@ -35,6 +38,17 @@
             <div id="login-section">
                 <div id="contenido">
                     <h2>Iniciar Sesión</h2>
+                    <div class="login-google">
+                        <div id="g_id_onload" 
+                            data-client_id="807564303593-o9is0eojnj2bla59ti5ookaq6b0kh394.apps.googleusercontent.com" 
+                            data-context="signin" data-ux_mode="popup" data-callback="handleCredentialresponse"
+                            data-auto_pront="false">
+                        </div>
+                        <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="filled_black"      
+                            data-text="continue_with" data-size="large" data-logo-alignment="left">
+                        </div>
+                    </div>
+                    <br>
                     <form id="login-form">
                         <input type="text" id="username" placeholder="Nombre de usuario" required>
                         <br>
