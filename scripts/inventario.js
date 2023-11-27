@@ -133,7 +133,7 @@ let inventory = [
     { code: "2033", name: 'Las moras chardonay (botella 12+4)', category: 'seco', quantity: 2 },
     { code: "2034", name: 'La mora malbec tinto (x botella 12+4)', category: 'seco', quantity: 2 },
     { code: "2035", name: 'la mora syrah', category: 'seco', quantity: 2 },
-    { code: "2036", name: 'Leche de almendras (x 1 litro', category: 'refrigerado', quantity:  },
+    { code: "2036", name: 'Leche de almendras (x 1 litro', category: 'refrigerado', quantity: 10 },
     { code: "2037", name: 'leche deslactosada alpina (paca  x 600ml', category: 'refrigerado', quantity:6  },
     { code: "2038", name: 'Leche en polvo(x 900 gr)', category: 'seco', quantity: 5 },
     { code: "2039", name: 'Lechuga lisa verde', category: 'refrigerado', quantity: 4 },
