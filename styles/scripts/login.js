@@ -18,3 +18,10 @@ function login() {
         showMessage('Credenciales incorrectas. Inténtelo de nuevo.');
     }
 }
+
+/* local storage para guardar la información en el navegador*/
+localStorage.setItem("Nombre de usuario" , "sabor italia");
+
+/*Aqui muestra la información guardada en el navegador por local storage*/ 
+let usuarioGuardado = localStorage.getItem("Nombre de usuario");
+console.log("Los usuarios logueados  son: ", usuarioGuardado );
