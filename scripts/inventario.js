@@ -312,6 +312,23 @@ function addProduct() {
         showMessage('Por favor, ingrese un nombre de producto válido y una cantidad válida.');
     }
 }
+/*Actualizar*/
+function actualizar() {
+    const codeProduct = document.getElementById('product-code').value;
+    const productName = document.getElementById('product-name').value;
+    const productCategory = document.getElementById('product-category').value;
+    const productQuantity = parseInt(document.getElementById('product-quantity').value, 10);
+
+    if (productName && productCategory && !isNaN(productQuantity) && productQuantity > 0 && codeProduct.length == 5) {
+        inventory.push({code: codeProduct, name: productName, category: productCategory, quantity: productQuantity });
+        showInventory();
+        hideactualizarForm();
+        showMessage('Producto actualizado al inventario.');
+    } else {
+        showMessage('Por favor, ingrese un nombre de producto válido y una cantidad válida.');
+    }
+}
+/*buscar*/
 function buscarProducto() {
     const codigoNombreBuscado = document.getElementById('buscarCodigoNombre').value.toLowerCase();
     const resultadoDiv = document.getElementById('resultadoBusqueda');
@@ -331,7 +348,7 @@ function buscarProducto() {
         showMessage('Producto no encontrado', 'resultadoBusqueda');
     }
 }
-
+/*buscar eliminar*/
 function buscarYEliminarProducto() {
     const codigoBuscado = document.getElementById('codigoEliminar').value;
     const resultadoDiv = document.getElementById('resultadoEliminar');
