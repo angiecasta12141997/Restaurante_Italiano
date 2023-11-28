@@ -312,6 +312,90 @@ function addProduct() {
         showMessage('Por favor, ingrese un nombre de producto válido y una cantidad válida.');
     }
 }
+function buscarProducto() {
+    const codigoNombreBuscado = document.getElementById('buscarCodigoNombre').value.toLowerCase();
+    const resultadoDiv = document.getElementById('resultadoBusqueda');
+    resultadoDiv.innerHTML = '';
+
+    const matchingProducts = inventory.filter(
+        (p) => p.code.toLowerCase().includes(codigoNombreBuscado) || p.name.toLowerCase().includes(codigoNombreBuscado)
+    );
+
+    if (matchingProducts.length > 0) {
+        matchingProducts.forEach((product) => {
+            const li = document.createElement('li');
+            li.textContent = `Código: ${product.code}  Nombre: ${product.name}  Cantidad: ${product.quantity}`;
+            resultadoDiv.appendChild(li);
+        });
+    } else {
+        showMessage('Producto no encontrado', 'resultadoBusqueda');
+    }
+}
+
+function buscarYEliminarProducto() {
+    const codigoBuscado = document.getElementById('codigoEliminar').value;
+    const resultadoDiv = document.getElementById('resultadoEliminar');
+    resultadoDiv.innerHTML = '';
+
+    const product = inventory.find((p) => p.code === codigoBuscado);
+
+    if (product) {
+        showProductInfo(product, 'resultadoEliminar');
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Eliminar';
+        deleteButton.addEventListener('click', () => deleteProduct(product.code, 'resultadoEliminar'));
+
+        resultadoDiv.appendChild(deleteButton);
+    } else {
+        showMessage('Producto no encontrado', 'resultadoEliminar');
+    }
+}
+
+function deleteProduct(code, targetId) {
+    const index = inventory.findIndex((p) => p.code === code);
+
+    if (index !== -1) {
+        const product = inventory[index];
+
+        const confirmDelete = confirm(`¿Estás seguro de que deseas eliminar el producto?\nCódigo: ${product.code}\nNombre: ${product.name}\nCantidad: ${product.quantity}`);
+
+        if (confirmDelete) {
+            inventory.splice(index, 1);
+            showInventory();
+            showMessage('Producto eliminado del inventario.', targetId);
+        }
+    }
+}
+
+//Exportar a pdf
+let inventarioExportar = [];
+inventory.forEach((element, index, array)=>{
+    inventarioExportar.push([element.code, element.name, element.category, element.quantity]);
+});
+
+button.addEventListener('click', (e)=>{
+    let doc = new jsPDF();
+    
+    let styles = {
+        fillColor: [100, 100, 255], 
+        textColor: [255, 255, 255],  
+    };
+
+    let cellStyles = {
+        fillColor: [200, 200, 200],  
+        textColor: [140, 86, 74],  
+    };
+    
+    doc.autoTable({
+    head:[['Código','Nombre','Categoría','Cantidad']],
+    body: inventarioExportar,    
+    theme: 'grid',  
+    styles: styles,
+    columnStyles: { 0: { cellStyles } },  // Aplicar estilos a una columna específica        
+    })
+    doc.save("Inventario_Restaurante.pdf")
+})
 
 showInventory()
 
