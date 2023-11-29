@@ -1,0 +1,65 @@
+body{
+    background: #fbddd5;
+}
+.barra-navegacion{
+    float: right;
+    background:  #fbddd5;
+    padding: 10px;
+    width: 100%;
+}
+.barra-navegacion a{
+    float: right;
+    text-decoration: none;
+    color: #0d0d0d;
+    margin: 4px;
+    padding: 2px;
+}
+
+.bebidas-menu{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.menu-bebidas{
+    width: 1260px;
+    height: 1250px;
+}
+.subtitulo1{
+    text-align: center;
+    color: #0d0d0d;
+    margin: 8px;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+}
+.comidas-menu{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.menu-comidas{
+    width: 1260px;
+    height: 1250px;
+}
+.subtitulo{
+    text-align: center;
+    color: #0d0d0d;
+    margin: 8px;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+}
+.postres-menu{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.menu-postres{
+    width: 1260px;
+    height: 1250px;
+}
+.subtitulo2{
+    text-align: center;
+    color: #0d0d0d;
+    margin: 8px;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+}
