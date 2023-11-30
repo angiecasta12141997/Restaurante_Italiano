@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
     /*text-align: center;*/
 }
+.crud{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
 #inventory-section, #add-product-form {
     margin: 20px;
     padding: 20px;
@@ -71,6 +77,8 @@ li {
 }
 #volver{
     float: right;
+    background: #bf907e;
+    width: 100%;
 }
 #regreso{
     background: #FBDDD5;
@@ -95,6 +103,30 @@ li {
     background: #5f8c3f;
     align-items: center;
     color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+#btn-buscar{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+#btn-eliminar{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+.bordes{
     margin: 16px;
     padding: 14px;
     border: 1px solid  #FBDDD5;

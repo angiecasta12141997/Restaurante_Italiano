@@ -27,49 +27,52 @@
             <h2>Inventario</h2>
             <ul id="product-list"></ul>
         </div>
-        <div id="add-product-form">
-            <h2>Agregar Producto</h2>
-            <form id="product-form">
-                <input type="text" id="product-code" placeholder="Código del Producto" required>
-                <input type="text" id="product-name" placeholder="Nombre del Producto" required>
-                <input type="text" id="product-category" placeholder="Categoria del Producto" required>
-                <input type="number" id="product-quantity" placeholder="Cantidad" required>
-                <button type="button" onclick="addProduct()" id="btn-agregar">Agregar</button>
-            </form>
-        </div>
-        <div id="message"></div>
-        <!--Actualizar-->
-        <div>
-            <h2>Actualizar Producto</h2>
-            <form id="product-form">
-                <input type="text" id="product-code" placeholder="Código del Producto" required>
-                <input type="text" id="product-name" placeholder="Nombre del Producto" required>
-                <input type ="text" id="product-category" placeholder="categoria del producto" required>
-                <input type="number" id="product-quantity" placeholder="Cantidad" required>
-                <button type="button" onclick="addProduct()" id="btn-actualizar">Actualizar</button>
-            </form>
-        </div>
-        <div id="message"></div>
-        <!--Buscar-->
-        <div id="add-product-form">
-            <h2>Buscar Producto</h2>
-        
-            <label for="buscarCodigoNombre">Ingresar Código o Nombre:</label>
-            <input type="text" id="buscarCodigoNombre">
-            <button onclick="buscarProducto()">Buscar</button>
-        
-            <div id="resultadoBusqueda"></div>
-            </div>
-            <!--Eliminar-->
+        <section class="crud">
             <div id="add-product-form">
-            <h2>Eliminar Producto</h2>
-        
-            <label for="codigoEliminar">Ingresar Código:</label>
-            <input type="text" id="codigoEliminar">
-            <button onclick="buscarYEliminarProducto()">Buscar Código</button>
-        
-            <div id="resultadoEliminar"></div>
+                <h2>Agregar Producto</h2>
+                <form id="product-form">
+                    <input type="text" id="product-code" placeholder="Código del Producto" required>
+                    <input type="text" id="product-name" placeholder="Nombre del Producto" required>
+                    <input type="text" id="product-category" placeholder="Categoria del Producto" required>
+                    <input type="number" id="product-quantity" placeholder="Cantidad" required>
+                    <button type="button" onclick="addProduct()" id="btn-agregar">Agregar</button>
+                </form>
             </div>
+            <div id="message"></div>
+            <!--Actualizar-->
+            <div id="add-product-form">
+                <h2>Actualizar Producto</h2>
+                <form id="product-form">
+                    <input type="text" id="product-code" placeholder="Código del Producto" required>
+                    <input type="text" id="product-name" placeholder="Nombre del Producto" required>
+                    <input type ="text" id="product-category" placeholder="categoria del producto" required>
+                    <input type="number" id="product-quantity" placeholder="Cantidad" required>
+                    <button type="button" onclick="addProduct()" id="btn-actualizar">Actualizar</button>
+                </form>
+            </div>
+            <div id="message"></div>
+            <!--Buscar-->
+            <div id="add-product-form">
+                <h2>Buscar Producto</h2>
+            
+                <label for="buscarCodigoNombre">Ingresar Código o Nombre:</label>
+                <input type="text" id="buscarCodigoNombre" class="bordes">
+                <button onclick="buscarProducto()" id="btn-buscar">Buscar</button>
+            
+                <div id="resultadoBusqueda"></div>
+            </div>
+                <!--Eliminar-->
+                <div id="add-product-form">
+                <h2>Eliminar Producto</h2>
+            
+                <label for="codigoEliminar">Ingresar Código:</label>
+                <input type="text" id="codigoEliminar" class="bordes">
+                <button onclick="buscarYEliminarProducto()" id="btn-eliminar">Eliminar</button>
+            
+                <div id="resultadoEliminar"></div>
+            </div>
+        </section>
+        
             
         <!--inicio  fración de codigo descargar PDF-->
          <script src="libreria_crearpdf.js"></script><!--jsPDF - PDF Document creation from JavaScript Version 1.5.3 -->
