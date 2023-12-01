@@ -1,20 +1,20 @@
 #loggin{
     text-align: center;
-    background-image: url(../imagenes/banner1_Mesa\ de\ trabajo\ 1.png);
+    background-image: url(../imagenes/fondo-login\ _Mesa\ de\ trabajo\ 1.png);
     background-repeat: no-repeat;
-    width: 1500px;
-    height: 1500px;
+    width: 1300px;
+    height: 1000px;
 }
 #loggin h1{
-    color: #ffffff;
+    color: #5f8c3f;
 }
 #loggin #contenido{
     text-align: center;
 }
 #login-section{
-    box-shadow: 8px;
+    box-shadow: 16px #0d0d0d;
     border-radius: 6px;
-    margin: 20px;
+    margin: 400px;
     padding: 20px;
     text-align: center;
     align-items: center;
@@ -66,7 +66,6 @@
     border: 2px solid #a61414;
     color: #a61414;
     border-radius: 4px;
-    
 }
 #message {
     color: green;
