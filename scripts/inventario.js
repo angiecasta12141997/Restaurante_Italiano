@@ -272,10 +272,10 @@ let inventory = [
     { code: "3073", name: 'Almojabana', category: 'seco', quantity: 36 }
 ];
 
-let currentUser = null;
+//let currentUser = null; 
 
 
-function showMessage(message) {
+/*function showMessage(message) {
     document.getElementById('message').textContent = message;
 }
 
@@ -295,6 +295,33 @@ function showAddProductForm() {
 
 function hideAddProductForm() {
     showMessage('');
+}*/
+
+function showInventory() {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = '';
+
+    inventory.forEach(product => {
+        const li = document.createElement('li');
+        li.textContent = `Código: ${product.code}  Nombre: ${product.name}  Categoria:${product.category}  Cantidad: ${product.quantity}`;
+        productList.appendChild(li);
+    });
+}
+
+function showAddProductForm() {
+}
+
+function hideAddProductForm() {
+    showMessage('');
+}
+
+function showMessage(message, targetId) {
+    document.getElementById(targetId).textContent = message;
+}
+
+function showProductInfo(product, targetId) {
+    const targetDiv = document.getElementById(targetId);
+    targetDiv.innerHTML = `Código: ${product.code}  Nombre: ${product.name}  Cantidad: ${product.quantity}`;
 }
 
 function addProduct() {
@@ -395,13 +422,13 @@ button.addEventListener('click', (e)=>{
     let doc = new jsPDF();
     
     let styles = {
-        fillColor: [100, 100, 255], 
-        textColor: [255, 255, 255],  
+        fillColor: [251, 221, 213],  
+        textColor: [0, 0, 0],  
     };
 
     let cellStyles = {
-        fillColor: [200, 200, 200],  
-        textColor: [140, 86, 74],  
+        fillColor: [166, 20, 20],  
+        textColor: [95, 140, 63],  
     };
     
     doc.autoTable({
@@ -412,7 +439,7 @@ button.addEventListener('click', (e)=>{
     columnStyles: { 0: { cellStyles } },  // Aplicar estilos a una columna específica        
     })
     doc.save("Inventario_Restaurante.pdf")
-})
+});
 
-showInventory()
+showInventory();
 

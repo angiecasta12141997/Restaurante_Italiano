@@ -1,6 +1,15 @@
 #loggin{
     text-align: center;
-    background-color: lightpink;
+    background-image: url(../imagenes/banner1_Mesa\ de\ trabajo\ 1.png);
+    background-repeat: no-repeat;
+    width: 1500px;
+    height: 1500px;
+}
+#loggin h1{
+    color: #ffffff;
+}
+#loggin #contenido{
+    text-align: center;
 }
 #login-section{
     box-shadow: 8px;

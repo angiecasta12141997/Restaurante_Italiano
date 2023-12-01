@@ -8,6 +8,21 @@
     <!--<link rel="stylesheet" href="./styles/styles.css">-->
     <link rel="stylesheet" href="styles/styles/admin.css">
     <link rel="stylesheet" href="empleadoLogin.html">
+
+        <!--Centrar y dar color botón Exportar a PDF-->
+        <style>
+            .botoncentro{
+                text-align:center; 
+            }   
+            #buttonExportar{
+                padding: 10px 20px;
+                font-size: 12px;
+                background-color: #5F8C3F; 
+                color: black;
+                border-radius: 10%; 
+                cursor: pointer; 
+            }    
+        </style>
     <script src="./scripts/inventario.js"></script>
 </head>
 <body>
@@ -26,6 +41,12 @@
         <div id="inventory-section" style="height: 200px; overflow-y: scroll;">
             <h2>Inventario</h2>
             <ul id="product-list"></ul>
+
+        </div>
+        <div class="botoncentro">
+            <button id="buttonExportar">Exportar en PDF</button>
+        </div>
+        
         </div>
         <section class="crud">
             <div id="add-product-form">

@@ -11,3 +11,27 @@
     margin: 4px;
     padding: 2px;
 }
+.italia{
+    justify-content: center;
+}
+.italia h2{
+    text-align: center;
+}
+.vegetal{
+    justify-content: center;
+}
+.somos{
+    justify-content: center;
+}
+.somos h2, h3{
+    text-align: center;
+}
+.nombre{
+    text-align: center;
+}
+.nombre p{
+    justify-content: center;
+}
+.atencion{
+    text-align: center;
+}
