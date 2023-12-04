@@ -1,4 +1,89 @@
-
+/* admin crud nuevo*/
+.crud{
+    flex-direction: row;
+    width: 100%;
+}
+.botones1{
+    text-align: center;
+}
+.agregar1{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+.buscar1{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+.actualizar1{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+.eliminar1{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+#add-product-form{
+    background: #FBDDD5;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 160px;
+    height: 280px;
+    flex-direction: row;
+}
+.cancelar1{
+    background: #5f8c3f;
+    align-items: center;
+    color: #0d0d0d;
+    margin: 16px;
+    padding: 14px;
+    border: 1px solid  #FBDDD5;
+    border-radius: 6px;
+}
+#search-form{
+    background: #FBDDD5;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 160px;
+    height: 280px;
+    flex-direction: row;
+}
+#update-form{
+    background: #FBDDD5;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 160px;
+    height: 280px;
+    flex-direction: row;
+}
 
 /*estilos para cajas*/
 /*body {

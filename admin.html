@@ -37,16 +37,18 @@
         </section>
     </header>
     <main>
-        <section>
+        <section class="crud">
             <h2>Inventario</h2>
             <ul id="product-list"></ul>
             <div class="botoncentro">
                 <button id="buttonExportar">Exportar en PDF</button>
             </div>
-            <button onclick="showAddProductForm()">Agregar Producto</button>
-            <button onclick="showSearchForm()">Buscar Producto</button>
-            <button onclick="showUpdateForm()">Actualizar Producto</button>
-            <button onclick="deleteProduct()">Eliminar Producto</button>
+            <div class="botones1">
+                <button onclick="showAddProductForm()" class="agregar1">Agregar Producto</button>
+                <button onclick="showSearchForm()" class="buscar1">Buscar Producto</button>
+                <button onclick="showUpdateForm()" class="actualizar1">Actualizar Producto</button>
+                <button onclick="deleteProduct()" class="eliminar1">Eliminar Producto</button>
+            </div>
             <div>
                 <form id="add-product-form">
                     <label for="product-code">Código:</label>
@@ -58,15 +60,15 @@
                     <label for="product-quantity">Cantidad:</label>
                     <input type="number" id="product-quantity" required>
             
-                    <button type="button" onclick="addProduct()">Agregar</button>
-                    <button type="button" onclick="hideForm('add-product-form')">Cancelar</button>
+                    <button type="button" onclick="addProduct()" class="agregar1">Agregar</button>
+                    <button type="button" onclick="hideForm('add-product-form')" class="cancelar1">Cancelar</button>
                 </form>
                 <br>
                 <form id="search-form">
                     <label for="search-code">Código a buscar:</label>
                     <input type="text" id="search-code" required pattern="\d{4}" title="Ingrese un código de 4 dígitos.">
-                    <button type="button" onclick="searchProduct()">Buscar</button>
-                    <button type="button" onclick="hideForm('search-form')">Cancelar</button>
+                    <button type="button" onclick="searchProduct()" class="buscar1">Buscar</button>
+                    <button type="button" onclick="hideForm('search-form')"  class="eliminar1">Cancelar</button>
                 </form>
                 <br>
                 <form id="update-form">
@@ -74,8 +76,8 @@
                     <input type="text" id="update-code" required pattern="\d{4}" title="Ingrese un código de 4 dígitos.">
                     <label for="new-quantity">Nueva cantidad:</label>
                     <input type="number" id="new-quantity" required>
-                    <button type="button" onclick="updateProduct()">Actualizar</button>
-                    <button type="button" onclick="hideForm('update-form')">Cancelar</button>
+                    <button type="button" onclick="updateProduct()" class="actualizar1">Actualizar</button>
+                    <button type="button" onclick="hideForm('update-form')" class="cancelar1">Cancelar</button>
                 </form>
             
                 <p id="message"></p>
