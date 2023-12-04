@@ -19,7 +19,7 @@ function login() {
     }
 }
 /* configurando localhost*/
-window.onload = function () {
+/*window.onload = function () {
     google.accounts.id.initialize({
         client_id: "807564303593-o9is0eojnj2bla59ti5ookaq6b0kh394.apps.googleusercontent.com",
         callback: handleCredentialResponse
@@ -41,7 +41,7 @@ function decodeJwtResponse(token) {
     );
 
     return JSON.parse(jsonPayload);
-}
+}*/
 /*en esta funciòn, usar el localstorage para guardar el nombre de usuario*/
 function handleCredentialResponse(response) {
     const responsePayload = decodeJwtResponse(response.credential);    

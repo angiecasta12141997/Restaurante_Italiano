@@ -1,4 +1,3 @@
-/*Agregar producto*/ 
 let inventory = [
     { code: "1001", name: 'Aceite de oliva extra virgen (x 3Ltr)', category: 'seco', quantity: 7 },
     { code: "1002", name: 'Aceite de girasoli (caja x 3)', category: 'seco', quantity: 3 },
@@ -81,7 +80,7 @@ let inventory = [
     { code: "1080", name: 'Cubos de maduro (x 1000 gr)', category: 'refrigerado', quantity: 12 },
     { code: "1081", name: 'Cuchara de chocolate', category: 'seco', quantity: 6 },
     { code: "1082", name: 'Delirio de baileys', category: 'seco', quantity: 4 },
-    { code: "1083", name: 'Desinfectante final step (1.5 litros diversey)', category: 'seco', quantity: 1 },
+    { code: "1083", name: 'Desinfectante final step (1.5 litros diversey', category: 'seco', quantity: 1 },
     { code: "1084", name: 'Detergente ulc (x 20 Litros)', category: 'seco', quantity: 1 },
     { code: "1085", name: 'Detergente ulc (x 5 litros)', category: 'seco', quantity: 1 },
     { code: "1086", name: 'Drax hornos y parrilla(x 0.5 litros', category: 'seco', quantity:  1},
@@ -92,7 +91,7 @@ let inventory = [
     { code: "1091", name: 'Esencia de vainilla negra astek', category: 'seco', quantity: 3 },
     { code: "1092", name: 'Espinaca bogotana', category: 'refrigerado', quantity: 4 },
     { code: "1093", name: 'Fantasia mediano decorado', category: 'seco', quantity: 9 },
-    { code: "1095", name: 'fetuccine unidas (x 90 gr)', category: 'refrigerado', quantity: 12 },
+    { code: "1095", name: 'fetuccine unidas 90 gr', category: 'refrigerado', quantity: 12 },
     { code: "1096", name: 'Filete de pollo (x1400  gramos x 10 undades', category: 'refrigerado', quantity: 10 },
     { code: "1097", name: 'Filete de salmon (x 175 gr x 5 unidades)', category: 'refrigerado', quantity: 10 },
     { code: "1098", name: 'Flan de leche ', category: 'refrigerado', quantity: 6 },
@@ -133,7 +132,7 @@ let inventory = [
     { code: "2033", name: 'Las moras chardonay (botella 12+4)', category: 'seco', quantity: 2 },
     { code: "2034", name: 'La mora malbec tinto (x botella 12+4)', category: 'seco', quantity: 2 },
     { code: "2035", name: 'la mora syrah', category: 'seco', quantity: 2 },
-    { code: "2036", name: 'Leche de almendras (x 1 litro', category: 'refrigerado', quantity: 10 },
+    { code: "2036", name: 'Leche de almendras (x 1 litro', category: '4', quantity: 10 },
     { code: "2037", name: 'leche deslactosada alpina (paca  x 600ml', category: 'refrigerado', quantity:6  },
     { code: "2038", name: 'Leche en polvo(x 900 gr)', category: 'seco', quantity: 5 },
     { code: "2039", name: 'Lechuga lisa verde', category: 'refrigerado', quantity: 4 },
@@ -182,7 +181,7 @@ let inventory = [
     { code: "2083", name: 'Pepinillo heinz redman', category: 'refrigerado', quantity: 5 },
     { code: "2084", name: 'Perejil crespo', category: 'refrigerados', quantity: 6 },
     { code: "2085", name: 'Pesto rojo (x 500 gr)', category: 'refrigerado', quantity: 8 },
-    { code: "2086", name: 'Pollo up (90 gr x 5 unidades)', category: 'refrigerado', quantity: 36 },
+    { code: "2086", name: 'Pollo up (90 gr x 5 unidades', category: 'refrigerado', quantity: 36 },
     { code: "2087", name: 'Postre de reina mediano', category: 'refrigerado', quantity: 20 },
     { code: "2088", name: 'Pulpa de fresa (x 10gr)', category: 'congelado', quantity: 120 },
     { code: "2089", name: 'Pulpa de mango (x 10gr)', category: 'congelado', quantity: 120 },
@@ -233,7 +232,7 @@ let inventory = [
     { code: "3034", name: 'Sueca', category: 'refrigerado', quantity: 50 },
     { code: "3035", name: 'Suma chlor d4.4 (x 3 litros)', category: 'seco', quantity:  2},
     { code: "3036", name: 'Suma divosan 946/32 (x unidad)', category: 'seco', quantity: 2 },
-    { code: "3037", name: 'Suma grill d9 desengrasante (tarro x 5 litros)', category: 'seco', quantity: 2 },
+    { code: "3037", name: 'Suma grill d9 desengrasante (tarro x 5 litros', category: 'seco', quantity: 2 },
     { code: "3038", name: 'Suma blendl7 detergente liquido (tarro x20 litros)', category: 'seco', quantity: 2 },
     { code: "3039", name: 'Sundae nevado', category: 'congelado', quantity: 30 },
     { code: "3040", name: 'Te chai (x 200gr)', category: 'seco', quantity: 4 },
@@ -272,10 +271,7 @@ let inventory = [
     { code: "3073", name: 'Almojabana', category: 'seco', quantity: 36 }
 ];
 
-//let currentUser = null; 
-
-
-/*function showMessage(message) {
+function showMessage(message) {
     document.getElementById('message').textContent = message;
 }
 
@@ -285,133 +281,86 @@ function showInventory() {
 
     inventory.forEach(product => {
         const li = document.createElement('li');
-        li.textContent = `Código: ${product.code}  Nombre: ${product.name}  Categoria:${product.category}  Cantidad: ${product.quantity}`;
+        li.textContent = `Código: ${product.code}  Nombre: ${product.name}  Cantidad: ${product.quantity} `;
+        
         productList.appendChild(li);
     });
 }
 
-function showAddProductForm() {
+function showForm(formId) {
+    document.getElementById(formId).style.display = 'block';
 }
 
-function hideAddProductForm() {
+function hideForm(formId) {
+    document.getElementById(formId).style.display = 'none';
     showMessage('');
-}*/
-
-function showInventory() {
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = '';
-
-    inventory.forEach(product => {
-        const li = document.createElement('li');
-        li.textContent = `Código: ${product.code}  Nombre: ${product.name}  Categoria:${product.category}  Cantidad: ${product.quantity}`;
-        productList.appendChild(li);
-    });
-}
-
-function showAddProductForm() {
-}
-
-function hideAddProductForm() {
-    showMessage('');
-}
-
-function showMessage(message, targetId) {
-    document.getElementById(targetId).textContent = message;
-}
-
-function showProductInfo(product, targetId) {
-    const targetDiv = document.getElementById(targetId);
-    targetDiv.innerHTML = `Código: ${product.code}  Nombre: ${product.name}  Cantidad: ${product.quantity}`;
 }
 
 function addProduct() {
     const codeProduct = document.getElementById('product-code').value;
     const productName = document.getElementById('product-name').value;
-    const productCategory = document.getElementById('product-category').value;
     const productQuantity = parseInt(document.getElementById('product-quantity').value, 10);
 
-    if (productName && productCategory && !isNaN(productQuantity) && productQuantity > 0 && codeProduct.length == 5) {
-        inventory.push({code: codeProduct, name: productName, category: productCategory, quantity: productQuantity });
+    if (productName && !isNaN(productQuantity) && productQuantity > 0 && codeProduct.length == 4) {
+        inventory.push({ code: codeProduct, name: productName, quantity: productQuantity });
         showInventory();
-        hideAddProductForm();
+        hideForm('add-product-form');
         showMessage('Producto agregado al inventario.');
     } else {
         showMessage('Por favor, ingrese un nombre de producto válido y una cantidad válida.');
     }
 }
-/*Actualizar*/
-function actualizar() {
-    const codeProduct = document.getElementById('product-code').value;
-    const productName = document.getElementById('product-name').value;
-    const productCategory = document.getElementById('product-category').value;
-    const productQuantity = parseInt(document.getElementById('product-quantity').value, 10);
 
-    if (productName && productCategory && !isNaN(productQuantity) && productQuantity > 0 && codeProduct.length == 5) {
-        inventory.push({code: codeProduct, name: productName, category: productCategory, quantity: productQuantity });
+function showSearchForm() {
+    showForm('search-form');
+}
+
+function searchProduct() {
+    const searchCode = document.getElementById('search-code').value;
+    const foundProduct = inventory.find(product => product.code === searchCode);
+
+    if (foundProduct) {
+        showMessage(`Producto encontrado: Código: ${foundProduct.code}, Nombre: ${foundProduct.name}, Cantidad: ${foundProduct.quantity}`);
+    } else {
+        showMessage('Producto no encontrado.');
+    }
+    hideForm('search-form');
+}
+
+function showUpdateForm() {
+    showForm('update-form');
+}
+
+function updateProduct() {
+    const updateCode = document.getElementById('update-code').value;
+    const newQuantity = parseInt(document.getElementById('new-quantity').value, 10);
+
+    const productToUpdate = inventory.find(product => product.code === updateCode);
+
+    if (productToUpdate && !isNaN(newQuantity) && newQuantity > 0) {
+        productToUpdate.quantity = newQuantity;
         showInventory();
-        hideactualizarForm();
-        showMessage('Producto actualizado al inventario.');
+        hideForm('update-form');
+        showMessage('Producto actualizado.');
     } else {
-        showMessage('Por favor, ingrese un nombre de producto válido y una cantidad válida.');
+        showMessage('Por favor, ingrese un código válido y una cantidad válida.');
     }
 }
-/*buscar*/
-function buscarProducto() {
-    const codigoNombreBuscado = document.getElementById('buscarCodigoNombre').value.toLowerCase();
-    const resultadoDiv = document.getElementById('resultadoBusqueda');
-    resultadoDiv.innerHTML = '';
 
-    const matchingProducts = inventory.filter(
-        (p) => p.code.toLowerCase().includes(codigoNombreBuscado) || p.name.toLowerCase().includes(codigoNombreBuscado)
-    );
+function deleteProduct() {
+    const updateCode = prompt('Ingrese el código del producto a eliminar:');
+    const productIndex = inventory.findIndex(product => product.code === updateCode);
 
-    if (matchingProducts.length > 0) {
-        matchingProducts.forEach((product) => {
-            const li = document.createElement('li');
-            li.textContent = `Código: ${product.code}  Nombre: ${product.name}  Cantidad: ${product.quantity}`;
-            resultadoDiv.appendChild(li);
-        });
+    if (productIndex !== -1) {
+        inventory.splice(productIndex, 1);
+        showInventory();
+        showMessage('Producto eliminado del inventario.');
     } else {
-        showMessage('Producto no encontrado', 'resultadoBusqueda');
-    }
-}
-/*buscar eliminar*/
-function buscarYEliminarProducto() {
-    const codigoBuscado = document.getElementById('codigoEliminar').value;
-    const resultadoDiv = document.getElementById('resultadoEliminar');
-    resultadoDiv.innerHTML = '';
-
-    const product = inventory.find((p) => p.code === codigoBuscado);
-
-    if (product) {
-        showProductInfo(product, 'resultadoEliminar');
-
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Eliminar';
-        deleteButton.addEventListener('click', () => deleteProduct(product.code, 'resultadoEliminar'));
-
-        resultadoDiv.appendChild(deleteButton);
-    } else {
-        showMessage('Producto no encontrado', 'resultadoEliminar');
+        showMessage('Producto no encontrado.');
     }
 }
 
-function deleteProduct(code, targetId) {
-    const index = inventory.findIndex((p) => p.code === code);
-
-    if (index !== -1) {
-        const product = inventory[index];
-
-        const confirmDelete = confirm(`¿Estás seguro de que deseas eliminar el producto?\nCódigo: ${product.code}\nNombre: ${product.name}\nCantidad: ${product.quantity}`);
-
-        if (confirmDelete) {
-            inventory.splice(index, 1);
-            showInventory();
-            showMessage('Producto eliminado del inventario.', targetId);
-        }
-    }
-}
-
+showInventory();
 //Exportar a pdf
 let inventarioExportar = [];
 inventory.forEach((element, index, array)=>{
@@ -440,6 +389,4 @@ button.addEventListener('click', (e)=>{
     })
     doc.save("Inventario_Restaurante.pdf")
 });
-
-showInventory();
-
+//aqui termina pdf.
